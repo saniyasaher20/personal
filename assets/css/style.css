@@ -1,0 +1,138 @@
+/* --------------------------------------------------------
+Style Sheet for Saniya Saher
+version: 1
+last modified:
+author: Saniya Saher
+email: saniyasaher20@gmail.com
+website:
+-------------------------------------------------------*/
+
+/* -----------------------------------------------------------
+CONTENTS:
+=General
+=Header
+=Mobile Navigation
+------------------------------------------------------*/
+
+/* ==========General========== */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  background-color: #000;
+  color: #fff;
+}
+
+body::before {
+  content: "";
+  background: #000 url("../img/bg.jpg") top right no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+a {
+  color: #18d26e;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #35e888;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+/* ==========Header========== */
+
+#s-header .container {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+#s-header * {
+  transition: ease-in-out 0.2s;
+}
+
+#s-header h1 a {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+#s-header h2 {
+  margin-bottom: 3rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#s-header .navbar a {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.1rem;
+  margin-right: 3rem;
+  padding: 0;
+  transition: ease-in-out 0.3s;
+}
+
+#s-header .navbar a::before {
+  content: "";
+  border-bottom: 3px solid #18d26e;
+  position: absolute;
+  bottom: 4px;
+  height: 2px;
+  width: 0;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+#s-header .navbar a:hover::before, #s-header .navbar .active::before {
+  visibility: visible;
+  width: 30px;
+}
+
+#s-header .navbar a:hover, #s-header .navbar .active {
+  color: #fff;
+}
+
+/* ==========Mobile Navigation========== */
+
+@media (max-width: 572px) {
+
+  .s-mobile-nav-toggle {
+    position: fixed;
+    top: 3%;
+    right: 5%;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .s-mobile-nav {
+    position: fixed;
+    top: 10%;
+    padding-top: 5rem;
+    width: 100vw;
+    height: 90%;
+    z-index: 5;
+    background: rgb(0, 0, 0, 0.9);
+  }
+
+  .s-mobile-nav .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  #s-header .navbar a::before {
+    border-bottom: none;
+  }
+}
