@@ -30,7 +30,7 @@ body {
 
 body::before {
   content: "";
-  background: #000 url("../img/bg.jpg") top right no-repeat;
+  background: #000 url("../img/bg1.jpg") top center no-repeat;
   background-size: cover;
   height: 100vh;
   position: fixed;
@@ -57,6 +57,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #s-header .container {
   display: flex;
+  justify-content: center;
   align-items: center;
   height: 100vh;
 }
@@ -65,49 +66,80 @@ h1, h2, h3, h4, h5, h6 {
   transition: ease-in-out 0.2s;
 }
 
+#s-header h1 {
+  transform: skewX(-20deg);
+}
+
 #s-header h1 a {
   color: #fff;
-  font-size: 3rem;
+  letter-spacing: 3px;
+  font-size: 5rem;
   font-weight: bold;
-  margin-bottom: 1rem;
+  /* font-style: italic; */
+  line-height: 1.5;
 }
 
 #s-header h2 {
   margin-bottom: 3rem;
   color: rgba(255, 255, 255, 0.5);
+  transform: skewX(-20deg);
+  letter-spacing: 1px;
 }
 
-#s-header .navbar a {
+@media (max-width: 572px) {
+  #s-header .container {
+    justify-content: start;
+    padding: 0;
+  }
+  #s-header h1 {
+    transform: skewX(-10deg);
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  #s-header h1 a {
+    letter-spacing: unset;
+  }
+  #s-header h2 {
+    transform: skewX(-10deg);
+    letter-spacing: unset;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
+
+#s-navbar a {
   color: rgba(255, 255, 255, 0.5);
-  font-size: 1.1rem;
-  margin-right: 3rem;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  transform: skewX(-20deg);
+  margin: 0 2rem;
   padding: 0;
-  transition: ease-in-out 0.3s;
+  transition: all 0.1s ease-in-out 0s;
 }
 
-#s-header .navbar a::before {
+#s-navbar a::before {
   content: "";
-  border-bottom: 3px solid #18d26e;
+  border-bottom: 3px solid rgb(254, 26, 79);
   position: absolute;
-  bottom: 4px;
-  height: 2px;
+  visibility: hidden;
+  bottom: 0;
+  height: 0;
   width: 0;
-  transition: all 0.3s ease-in-out 0s;
 }
 
-#s-header .navbar a:hover::before, #s-header .navbar .active::before {
+#s-navbar a:hover::before, #s-navbar .active::before {
   visibility: visible;
+  transition: all 0.3s ease-in-out 0s;
   width: 30px;
 }
 
-#s-header .navbar a:hover, #s-header .navbar .active {
+#s-navbar a:hover, #s-navbar .active {
   color: #fff;
 }
 
 /* ==========Mobile Navigation========== */
 
 @media (max-width: 572px) {
-
   .s-mobile-nav-toggle {
     position: fixed;
     top: 3%;
@@ -115,7 +147,6 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.5rem;
     cursor: pointer;
   }
-  
   .s-mobile-nav {
     position: fixed;
     top: 10%;
@@ -125,7 +156,6 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 5;
     background: rgb(0, 0, 0, 0.9);
   }
-
   .s-mobile-nav .navbar-nav {
     display: flex;
     flex-direction: column;
