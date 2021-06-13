@@ -9,31 +9,43 @@ website:
 
 /* -----------------------------------------------------------
 CONTENTS:
-=General
-=Header
-=Mobile Navigation
+= General
+= Header
+= Navbar
+= Mobile Navigation
 ------------------------------------------------------*/
 
-/* ==========General========== */
+/* ========== General ========== */
+* { outline: 1px red solid !important; visibility: visible !important }
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Share+Tech&display=swap');
+:root {
+  --heading-font: 'Share Tech', sans-serif;
+  --normal-font: 'Montserrat', sans-serif;
+  --color-primary: rgb(25, 33, 56);
+  --color-secondary: rgb(254, 26, 79); 
+  --color-light: rgb(39, 51, 93); 
+  
+}
 
 *, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: var(--normal-font);
 }
 
-body {
-  position: relative;
-  background-color: #000;
-  color: #fff;
+*::selection {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: var(--color-primary);
 }
 
-body::before {
+header::before {
   content: "";
   background: #000 url("../img/bg1.jpg") top center no-repeat;
   background-size: cover;
-  height: 100vh;
-  position: fixed;
+  height: 100%;
+  position: absolute;
   left: 0;
   right: 0;
   top: 0;
@@ -50,36 +62,75 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: var(--heading-font);
 }
 
-/* ==========Header========== */
+/* Section heading */
 
-#s-header .container {
+.section-heading {
+  margin: 3rem 0 2rem 0;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  color: var(--color-primary);
 }
 
-#s-header * {
+.section-heading span:first-child {
+  font-family: var(--heading-font);
+}
+
+@media (max-width: 572px) {
+
+}
+
+.red_line {
+  animation: blink 4s ease-in-out infinite alternate 2s;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  color: var(--color-secondary);
+  margin-left: .5rem;
+  align-self: flex-start;
+  font-weight: 100;
+}
+
+@keyframes blink {
+  0%, 5% {
+    visibility: visible;
+  }
+  11%, 15% {
+    visibility: hidden;
+  }
+  33%, 65% {
+    visibility: visible;
+  }
+  66%, 70% {
+    visibility: hidden;
+  }
+  71%, 75% {
+    visibility: visible;
+  }
+  76%, 80% {
+    visibility: hidden;
+  }
+}
+
+/* ========== Header ========== */
+
+#header * {
   transition: ease-in-out 0.2s;
 }
 
-#s-header h1 {
+#header h1 {
   transform: skewX(-20deg);
 }
 
-#s-header h1 a {
+#header h1 a {
   color: #fff;
   letter-spacing: 3px;
   font-size: 5rem;
   font-weight: bold;
-  /* font-style: italic; */
   line-height: 1.5;
 }
 
-#s-header h2 {
+#header h2 {
   margin-bottom: 3rem;
   color: rgba(255, 255, 255, 0.5);
   transform: skewX(-20deg);
@@ -87,39 +138,33 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 572px) {
-  #s-header .container {
-    justify-content: start;
-    padding: 0;
+  #header h1 {
+     transform: skewX(-10deg);
+     overflow: hidden;
+
   }
-  #s-header h1 {
-    transform: skewX(-10deg);
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-  }
-  #s-header h1 a {
+  #header h1 a {
     letter-spacing: unset;
+    font-size: 4rem;
   }
-  #s-header h2 {
+  #header h2 {
     transform: skewX(-10deg);
     letter-spacing: unset;
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
   }
 }
 
+/* ========== Navbar ========== */
 #s-navbar a {
   color: rgba(255, 255, 255, 0.5);
   font-size: 1.2rem;
   letter-spacing: 1px;
   transform: skewX(-20deg);
-  margin: 0 2rem;
-  padding: 0;
   transition: all 0.1s ease-in-out 0s;
 }
 
 #s-navbar a::before {
   content: "";
-  border-bottom: 3px solid rgb(254, 26, 79);
+  border-bottom: 3px solid var(--color-secondary);
   position: absolute;
   visibility: hidden;
   bottom: 0;
@@ -137,7 +182,36 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
-/* ==========Mobile Navigation========== */
+/* moving red splash line effect */
+
+/* #s-navbar a:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  animation: moving_line 3s ease-in-out 1s 1;
+  color: var(--color-secondary);
+  visibility: hidden;
+  z-index: 1;
+}
+
+@keyframes moving_line {
+  0% {
+    position: absolute;
+    visibility: visible;
+    clip-path: polygon(40% 0, 50% 0, 0 90%, 0 70%);
+  }
+  33% {
+    clip-path: polygon(60% 0, 70% 0, 20% 100%, 0% 100%);
+  }
+  66% {
+    clip-path: polygon(80% 0, 90% 0, 40% 100%, 20% 100%);
+  }
+  100% {
+    clip-path: polygon(100% 0, 110% 0, 60% 100%, 40% 100%);
+  }
+} */
+
+/* ========== Mobile Navigation ========== */
 
 @media (max-width: 572px) {
   .s-mobile-nav-toggle {
@@ -162,7 +236,21 @@ h1, h2, h3, h4, h5, h6 {
     gap: 20px;
     justify-content: space-between;
   }
-  #s-header .navbar a::before {
+  #header .navbar a::before {
     border-bottom: none;
   }
+}
+
+/* ========== About Section ========== */
+
+#about p.lead {
+  letter-spacing: 1px;
+}
+
+#about ul li::marker {
+  content: "I";
+  text-shadow: -1px -1px 0px var(--color-primary);
+  color: var(--color-secondary);
+  margin-left: calc(.25rem * 2);
+  font-style: italic;
 }

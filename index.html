@@ -19,47 +19,75 @@
 </head>
 
 <body>
-  <!-- Header -->
-  <header id="s-header">
-    <div class="container">
-      <div class="row">
-        <div class="col text-center text-md-nowrap ">
-          <h1><a href="index.html">Saniya Saher</a></h1>
-          <h2>I'm a passionate <span>Web Developer</span> from India</h2>
+  <!-- ========== Header ========== -->
+  <section id="header">
+    <header>
+      <div class="container-fluid d-flex justify-content-sm-center justify-content-start align-items-center vh-100 p-md-0 ">
+        <div class="row">
+          <div class="col text-center text-md-nowrap ">
+            <h1><a href="index.html">Saniya Saher</a></h1>
+            <h2>I'm a passionate Web Developer from India</h2>
 
-          <!-- Navbar -->
-          <nav class="navbar navbar-expand-sm navbar-dark" id="s-navbar" aria-label="Main navigation">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-sm navbar-dark" id="s-navbar" aria-label="Main navigation">
 
-            <button class="s-mobile-nav-toggle navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarID" aria-controls="navbarID" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
+              <button class="s-mobile-nav-toggle navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarID" aria-controls="navbarID" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
 
-            <div class="s-mobile-nav collapse navbar-collapse mx-sm-auto justify-content-center" id="navbarID">
-              <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                <a class="nav-link" href="#about"><span>About</span></a>
-                <a class="nav-link" href="#services"><span>Services</span></a>
-                <a class="nav-link" href="#portfolio"><span>Portfolio</span></a>
-                <a class="nav-link" href="#contact"><span>Contact</span></a>
+              <div class="s-mobile-nav collapse navbar-collapse mx-sm-auto justify-content-between" id="navbarID">
+                <!-- <div class="navbar-nav"> -->
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  <a class="nav-link" href="#about" data-text="About"><span>About</span></a>
+                  <a class="nav-link" href="#services" data-text="Services"><span>Services</span></a>
+                  <a class="nav-link" href="#portfolio" data-text="Portfolio"><span>Portfolio</span></a>
+                  <a class="nav-link" href="#contact" data-text="Contact"><span>Contact</span></a>
+                </div>
               </div>
+            </nav>
+            <!--End Navbar-->
+
+            <div class="s-social-links">
+              <a href="#" class="s-facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="s-linkedin"><i class="bi bi-linkedin"></i></a>
+              <a href="#" class="s-github"><i class="bi bi-github"></i></a>
             </div>
-          </nav>
-          <!--End Navbar-->
 
-          <div class="s-social-links">
-            <a href="#" class="s-facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="s-linkedin"><i class="bi bi-linkedin"></i></a>
-            <a href="#" class="s-github"><i class="bi bi-github"></i></a>
           </div>
-
         </div>
       </div>
-    </div>
-  </header> <!-- End Header -->
+    </header>
+  </section> <!-- End Header -->
+
+  <!-- ========== About Section ========== -->
+  <section id="about" class="about">
+
+    <!-- About Me -->
+    <div class="about-me container">
+      <div class="row">
+        <div class="section-heading col">
+          <span class="display-5">About</span>
+          <span class="red_line display-5" aria-hidden="true">I</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 col-sm-8 d-block mx-auto">
+          <p class="lead fw-normal "> My name is Saniya Saher. I graduated in 2020. Now trying to be a full-stack web-developer. I am always open to challenges and constructive feedback. I am open-minded and learn new things quickly.
+            <!-- <span>I want to become a team player and dedicate all my skills and talents to develop high-quality and unique products.</span> -->
+          </p>
+        </div>
+      </div>
+
+    </div> <!-- End About Me -->
+
+
+  </section><!-- End About Section -->
+
+
 
   <!-- Vendor Script -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
-
 
   <!-- Custom Script -->
   <script src="assets/js/script.js"></script>
