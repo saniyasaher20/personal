@@ -1,0 +1,187 @@
+body {
+    overflow-x: hidden;
+}
+
+.cloud-img {
+    background-image: url("/assets/img/pngkey.com-colour-smoke-png-323818.png");
+}
+
+/* ---------------------------------- Hero ---------------------------------- */
+
+section.hero::before {
+    content: '';
+    /* position-relative class added to .hero.container */
+    position: absolute;
+    background: url("/assets/img/Mask1.png") no-repeat right center;
+    background-size: contain;
+    height: 100%;
+    width: 100vw;
+    top: 0;
+    visibility: hidden;
+    z-index: -1;
+    /*negative z-index will keep it in bg so that hovering and clicking to other elements will work properly*/
+}
+
+/* upto lg screen (width >= 1200px)*/
+
+@media (min-width: 1200px) {
+    section.hero::before {
+        transform: translate(-5%, 25%);
+        visibility: visible;
+    }
+}
+
+/*from lg to md screen */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    section.hero::before {
+        transform: translate(-3%, 30%);
+        visibility: visible;
+    }
+}
+
+/* .hero__title span { */
+
+.hero__title {
+    position: relative;
+    font-weight: 900;
+    letter-spacing: -4px;
+    z-index: -2;
+    /*cloud has z-index: -1; in order to make hero__title backward z-index:-2;*/
+    /* font-size: calc(100% + 18vw); */
+}
+
+.hero__cloud__col {
+    /* position-absolute class added relative to .container.hero */
+    top: 9%;
+    z-index: -1;
+}
+
+@media (min-width: 768px) {
+    .hero__cloud__col {
+        /* position-absolute class added */
+        top: 18%;
+    }
+}
+
+.hero__cloud {
+    opacity: .8;
+    animation: clouding 20s alternate ease-in-out infinite 1s;
+}
+
+@keyframes clouding {
+    0% {
+        transform: translateX(0);
+        opacity: .8;
+    }
+    50% {
+        opacity: .9;
+    }
+    100% {
+        transform: translate(200px, -2px);
+        opacity: 1;
+    }
+}
+
+/* -------------------------------- Features -------------------------------- */
+
+/* .features {
+    padding-top: 23rem;
+} */
+
+.features {
+    position: relative;
+}
+
+.features .col.boxShadowHover {
+    border-radius: 4px;
+}
+
+.features::before {
+    content: '';
+    position: absolute;
+    background: url("/assets/img/Mask2.png") no-repeat left center;
+    background-size: contain;
+    height: 50%;
+    width: 100vw;
+    top: 0;
+    left: -5%;
+    visibility: hidden;
+    z-index: -1;
+    /*negative z-index will keep it in bg so that hovering and clicking to other elements will work properly*/
+}
+
+/* upto lg screen */
+
+@media (min-width: 1200px) {
+    .features::before {
+        transform: translate(-3%, 85%);
+        visibility: visible;
+    }
+}
+
+/*from lg to md screen */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .features::before {
+        transform: translate(0%, 80%);
+        visibility: visible;
+    }
+}
+
+/* ---------------------------------- Works --------------------------------- */
+
+@media (min-width: 768px) {
+    .works {
+        position: relative;
+    }
+    .works::after {
+        content: '';
+        position: absolute;
+        right: -10%;
+        top: 10%;
+        height: 100%;
+        width: 100vw;
+        background: url("/assets/img/WORKS.png") no-repeat right top;
+        z-index: -1;
+    }
+}
+
+.works-img {
+    height: 558px;
+}
+
+.works-text {
+    width: auto;
+    height: auto;
+}
+
+/* ------------------------------ CTA + Footer ------------------------------ */
+
+.cta {
+    background: url("/assets/img/mountains-footer.png") no-repeat bottom center;
+    background-size: cover;
+    height: 43em;
+    position: relative;
+}
+
+.cta :not(img) {
+    z-index: 1;
+}
+
+/* md and larger screens */
+
+@media (min-width: 768px) {
+    .cta::before {
+        content: "";
+        position: absolute;
+        top: -40%;
+        right: -20%;
+        background: url("/assets/img/footer-blue-bar.png") no-repeat right center;
+        background-size:contain ;
+        height: 100%;
+        width: 100%;
+    z-index: 0;
+
+    }
+}
