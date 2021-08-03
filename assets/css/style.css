@@ -16,16 +16,19 @@ CONTENTS:
 ------------------------------------------------------*/
 
 /* ========== General ========== */
-* { outline: 1px red solid !important; visibility: visible !important }
+
+* {
+  /* outline: 1px red solid !important; */
+  visibility: visible !important
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Share+Tech&display=swap');
 :root {
   --heading-font: 'Share Tech', sans-serif;
   --normal-font: 'Montserrat', sans-serif;
   --color-primary: rgb(25, 33, 56);
-  --color-secondary: rgb(254, 26, 79); 
-  --color-light: rgb(39, 51, 93); 
-  
+  --color-secondary: rgb(254, 26, 79);
+  --color-light: rgb(39, 51, 93);
 }
 
 *, *::before, *::after {
@@ -67,8 +70,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Section heading */
 
+section {
+  margin: 4rem 0;
+}
+
 .section-heading {
-  margin: 3rem 0 2rem 0;
+  margin-bottom: 3rem;
   display: flex;
   justify-content: center;
   color: var(--color-primary);
@@ -78,37 +85,20 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--heading-font);
 }
 
-@media (max-width: 572px) {
-
-}
-
 .red_line {
-  animation: blink 4s ease-in-out infinite alternate 2s;
+  animation: blink 1s steps(5, start) infinite;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   color: var(--color-secondary);
   margin-left: .5rem;
   align-self: flex-start;
-  font-weight: 100;
 }
 
 @keyframes blink {
-  0%, 5% {
-    visibility: visible;
+  0%, 50% {
+    opacity: 0;
   }
-  11%, 15% {
-    visibility: hidden;
-  }
-  33%, 65% {
-    visibility: visible;
-  }
-  66%, 70% {
-    visibility: hidden;
-  }
-  71%, 75% {
-    visibility: visible;
-  }
-  76%, 80% {
-    visibility: hidden;
+  56%, 100% {
+    opacity: 1;
   }
 }
 
@@ -139,9 +129,8 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 572px) {
   #header h1 {
-     transform: skewX(-10deg);
-     overflow: hidden;
-
+    transform: skewX(-10deg);
+    overflow: hidden;
   }
   #header h1 a {
     letter-spacing: unset;
@@ -154,6 +143,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ========== Navbar ========== */
+
 #s-navbar a {
   color: rgba(255, 255, 255, 0.5);
   font-size: 1.2rem;
@@ -248,9 +238,47 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #about ul li::marker {
-  content: "I";
-  text-shadow: -1px -1px 0px var(--color-primary);
   color: var(--color-secondary);
-  margin-left: calc(.25rem * 2);
-  font-style: italic;
+  font-size: 1.5rem;
 }
+
+/* Skills */
+
+.progress-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.progress {
+  height: 16px;
+  background: #fff;
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 30px;
+  overflow: visible;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.progress .progress-bar {
+  position: relative;
+  background: rgb(25, 33, 56);
+  background: linear-gradient(90deg, rgba(25, 33, 56, 1) 29%, rgba(40, 53, 95, 1) 87%, rgba(255, 34, 88, 1) 100%);
+  -webkit-animation: animate-positive 2s;
+  animation: animate-positive 2s;
+}
+
+.progress .progress-level {
+  display: block;
+  font-size: .8rem;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+/* ========== Portdolio ========== */
+.card__img {
+width: 100%; 
+}
+
+/* ========== Footer ========== */

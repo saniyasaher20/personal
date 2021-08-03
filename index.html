@@ -12,6 +12,7 @@
 
   <!-- Vendor CSS -->
   <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/glightbox/css/glightbox.min.css">
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
@@ -20,60 +21,59 @@
 
 <body>
   <!-- ========== Header ========== -->
-  <section id="header">
-    <header>
-      <div class="container-fluid d-flex justify-content-sm-center justify-content-start align-items-center vh-100 p-md-0 ">
-        <div class="row">
-          <div class="col text-center text-md-nowrap ">
-            <h1><a href="index.html">Saniya Saher</a></h1>
-            <h2>I'm a passionate Web Developer from India</h2>
+  <header id="header">
+    <div class="container-fluid d-flex justify-content-sm-center justify-content-start align-items-center vh-100 p-md-0 ">
+      <div class="row">
+        <div class="col text-center text-md-nowrap ">
+          <h1 class="header-title"><a href="index.html">Saniya Saher</a></h1>
+          <h2>I'm a passionate Web Developer from India</h2>
 
-            <!-- Navbar -->
-            <nav class="navbar navbar-expand-sm navbar-dark" id="s-navbar" aria-label="Main navigation">
+          <!-- Navbar -->
+          <nav class="navbar navbar-expand-sm navbar-dark" id="s-navbar" aria-label="Main navigation">
 
-              <button class="s-mobile-nav-toggle navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarID" aria-controls="navbarID" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
+            <button class="s-mobile-nav-toggle navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarID" aria-controls="navbarID" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
 
-              <div class="s-mobile-nav collapse navbar-collapse mx-sm-auto justify-content-between" id="navbarID">
-                <!-- <div class="navbar-nav"> -->
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  <a class="nav-link" href="#about" data-text="About"><span>About</span></a>
-                  <a class="nav-link" href="#services" data-text="Services"><span>Services</span></a>
-                  <a class="nav-link" href="#portfolio" data-text="Portfolio"><span>Portfolio</span></a>
-                  <a class="nav-link" href="#contact" data-text="Contact"><span>Contact</span></a>
-                </div>
-              </div>
-            </nav>
-            <!--End Navbar-->
-
-            <div class="s-social-links">
-              <a href="#" class="s-facebook"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="s-linkedin"><i class="bi bi-linkedin"></i></a>
-              <a href="#" class="s-github"><i class="bi bi-github"></i></a>
+            <div class="s-mobile-nav collapse navbar-collapse mx-sm-auto justify-content-between" id="navbarID">
+              <!-- <div class="navbar-nav"> -->
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link" href="#about" data-text="About"><span>About</span></a>
+              <a class="nav-link" href="#services" data-text="Services"><span>Services</span></a>
+              <a class="nav-link" href="#portfolio" data-text="Portfolio"><span>Portfolio</span></a>
+              <a class="nav-link" href="#contact" data-text="Contact"><span>Contact</span></a>
             </div>
-
-          </div>
         </div>
+        </nav>
+        <!--End Navbar-->
+
+        <div class="s-social-links">
+          <a href="#" class="s-facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="s-linkedin"><i class="bi bi-linkedin"></i></a>
+          <a href="#" class="s-github"><i class="bi bi-github"></i></a>
+        </div>
+
       </div>
-    </header>
-  </section> <!-- End Header -->
+    </div>
+    </div>
+  </header> <!-- End Header -->
 
   <!-- ========== About Section ========== -->
   <section id="about" class="about">
 
     <!-- About Me -->
     <div class="about-me container">
+
       <div class="row">
         <div class="section-heading col">
-          <span class="display-5">About</span>
-          <span class="red_line display-5" aria-hidden="true">I</span>
+          <span class="display-6">About</span>
+          <span class="red_line display-6">I</span>
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-6 col-sm-8 d-block mx-auto">
-          <p class="lead fw-normal "> My name is Saniya Saher. I graduated in 2020. Now trying to be a full-stack web-developer. I am always open to challenges and constructive feedback. I am open-minded and learn new things quickly.
+          <p class="lead fw-normal text-center"> My name is Saniya Saher. I graduated in 2020. Now trying to be a full-stack web-developer. I am always open to challenges and constructive feedback. I am open-minded and learn new things quickly.
             <!-- <span>I want to become a team player and dedicate all my skills and talents to develop high-quality and unique products.</span> -->
           </p>
         </div>
@@ -81,13 +81,157 @@
 
     </div> <!-- End About Me -->
 
-
   </section><!-- End About Section -->
 
+  <!-- ========== Skills ========== -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <div class="row">
+        <div class="section-heading col">
+          <span class="display-6">Skills</span>
+          <span class="red_line display-6" aria-hidden="true">I</span>
+        </div>
+      </div>
 
+      <div class="row row-cols-md-2 row-cols-1 gx-5 mx-auto">
+
+        <div class="col">
+          <h3 class="progress-title">HTML 5</h3>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width:75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-level">Intermediate</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <h3 class="progress-title">CSS 3</h3>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-level">Intermediate</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <h3 class="progress-title">Bootstrap 5</h3>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-level">Intermediate</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <h3 class="progress-title">PHP</h3>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-level">Basic</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <h3 class="progress-title">WordPress</h3>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-level">Intermediate</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <h3 class="progress-title">Ajax</h3>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-level">Basic</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <h3 class="progress-title">jQuery</h3>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-level">Basic</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section><!-- End Skills Section -->
+
+  <!-- ========== Portfolio ========== -->
+  <div class="container">
+
+    <div class="row">
+      <div class="section-heading col">
+        <span class="display-6">Portfolio</span>
+        <span class="red_line display-6" aria-hidden="true">I</span>
+      </div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 g-5">
+      <div class="col">
+        <div class="card">
+          <img class="card__img" src="https://source.unsplash.com/random/150x100" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://source.unsplash.com/random/150x100" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title ">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://source.unsplash.com/random/150x100" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://source.unsplash.com/random/150x100" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> <!-- End Portfolio -->
+
+  <!-- ========== Footer ========== -->
+  <footer id="footer" class="footer mt-auto py-3 bg-light">
+    <div class="container">
+
+      <div class="row justify-content-md-between">
+        <div class="col-md-3">
+          <h3>About me</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, maxime assumenda? Est modi, doloribus quos vero iure explicabo. Porro, sapiente?</p>
+        </div>
+      </div>
+
+
+      <span class="text-muted">Place sticky footer content here.</span>
+    </div>
+  </footer> <!-- End footer -->
 
   <!-- Vendor Script -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 
   <!-- Custom Script -->
   <script src="assets/js/script.js"></script>
